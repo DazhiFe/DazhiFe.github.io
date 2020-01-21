@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第3期 使用CSS的border属性绘制各种几何形状 | 大志前端</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.d0761761.css" as="style"><link rel="preload" href="/assets/js/app.860d6138.js" as="script"><link rel="preload" href="/assets/js/2.13cab879.js" as="script"><link rel="preload" href="/assets/js/35.3288073b.js" as="script"><link rel="prefetch" href="/assets/js/10.d09a6ceb.js"><link rel="prefetch" href="/assets/js/11.5a2b7876.js"><link rel="prefetch" href="/assets/js/12.a91b9ab3.js"><link rel="prefetch" href="/assets/js/13.70dbded7.js"><link rel="prefetch" href="/assets/js/14.d5dce36d.js"><link rel="prefetch" href="/assets/js/15.d5445a07.js"><link rel="prefetch" href="/assets/js/16.626ad661.js"><link rel="prefetch" href="/assets/js/17.e8735692.js"><link rel="prefetch" href="/assets/js/18.59fad0e2.js"><link rel="prefetch" href="/assets/js/19.b88e2586.js"><link rel="prefetch" href="/assets/js/20.e71e6075.js"><link rel="prefetch" href="/assets/js/21.ff579162.js"><link rel="prefetch" href="/assets/js/22.5f856542.js"><link rel="prefetch" href="/assets/js/23.c0bed4df.js"><link rel="prefetch" href="/assets/js/24.03b70b12.js"><link rel="prefetch" href="/assets/js/25.0efae57e.js"><link rel="prefetch" href="/assets/js/26.bb875338.js"><link rel="prefetch" href="/assets/js/27.6552247d.js"><link rel="prefetch" href="/assets/js/28.1a243dc5.js"><link rel="prefetch" href="/assets/js/29.b86c4301.js"><link rel="prefetch" href="/assets/js/3.7095872d.js"><link rel="prefetch" href="/assets/js/30.b2164be9.js"><link rel="prefetch" href="/assets/js/31.f947d87d.js"><link rel="prefetch" href="/assets/js/32.24ed0b96.js"><link rel="prefetch" href="/assets/js/33.070d1959.js"><link rel="prefetch" href="/assets/js/34.adca903f.js"><link rel="prefetch" href="/assets/js/36.3d13f7f3.js"><link rel="prefetch" href="/assets/js/37.468ad535.js"><link rel="prefetch" href="/assets/js/38.ed7dc717.js"><link rel="prefetch" href="/assets/js/39.019f8a3a.js"><link rel="prefetch" href="/assets/js/4.a021ebaf.js"><link rel="prefetch" href="/assets/js/40.e099c35e.js"><link rel="prefetch" href="/assets/js/41.9000351d.js"><link rel="prefetch" href="/assets/js/42.235a464b.js"><link rel="prefetch" href="/assets/js/43.b9c3cc87.js"><link rel="prefetch" href="/assets/js/44.523df039.js"><link rel="prefetch" href="/assets/js/45.0bf8011c.js"><link rel="prefetch" href="/assets/js/46.6812e920.js"><link rel="prefetch" href="/assets/js/47.6673d49d.js"><link rel="prefetch" href="/assets/js/48.baacca6b.js"><link rel="prefetch" href="/assets/js/49.1ae46e37.js"><link rel="prefetch" href="/assets/js/5.0097b90f.js"><link rel="prefetch" href="/assets/js/50.4fdafb67.js"><link rel="prefetch" href="/assets/js/51.01a8fa5f.js"><link rel="prefetch" href="/assets/js/52.3577c9b8.js"><link rel="prefetch" href="/assets/js/53.2edf4c53.js"><link rel="prefetch" href="/assets/js/54.86b2562f.js"><link rel="prefetch" href="/assets/js/55.ab095cfb.js"><link rel="prefetch" href="/assets/js/56.20453547.js"><link rel="prefetch" href="/assets/js/57.6fec5738.js"><link rel="prefetch" href="/assets/js/58.5b933352.js"><link rel="prefetch" href="/assets/js/59.011cb942.js"><link rel="prefetch" href="/assets/js/6.0d265af8.js"><link rel="prefetch" href="/assets/js/60.67ef1a0f.js"><link rel="prefetch" href="/assets/js/61.a2a165ff.js"><link rel="prefetch" href="/assets/js/62.2985d094.js"><link rel="prefetch" href="/assets/js/63.ba83348d.js"><link rel="prefetch" href="/assets/js/64.a4627492.js"><link rel="prefetch" href="/assets/js/65.b1a3226f.js"><link rel="prefetch" href="/assets/js/66.3c2a2221.js"><link rel="prefetch" href="/assets/js/7.e1d75158.js"><link rel="prefetch" href="/assets/js/8.0b49752c.js"><link rel="prefetch" href="/assets/js/9.9313a214.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d0761761.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">大志前端</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础" class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basics/html/rel.html" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/fullstack/" class="nav-link">Web全栈</a></div><div class="nav-item"><a href="/myarticle/" class="nav-link router-link-active">我的文章</a></div><div class="nav-item"><a href="/article/" class="nav-link">优质文章</a></div><div class="nav-item"><a href="/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/question/" class="nav-link">问题库</a></div><div class="nav-item"><a href="/repository/" class="nav-link">常用库</a></div><div class="nav-item"><a href="/website/" class="nav-link">网站</a></div><div class="nav-item"><a href="/resources/" class="nav-link">资源</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础" class="dropdown-title"><span class="title">基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/basics/html/rel.html" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/basics/css/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/basics/javascript/" class="nav-link">JavaScript</a></li></ul></div></div><div class="nav-item"><a href="/fullstack/" class="nav-link">Web全栈</a></div><div class="nav-item"><a href="/myarticle/" class="nav-link router-link-active">我的文章</a></div><div class="nav-item"><a href="/article/" class="nav-link">优质文章</a></div><div class="nav-item"><a href="/interview/" class="nav-link">面试</a></div><div class="nav-item"><a href="/question/" class="nav-link">问题库</a></div><div class="nav-item"><a href="/repository/" class="nav-link">常用库</a></div><div class="nav-item"><a href="/website/" class="nav-link">网站</a></div><div class="nav-item"><a href="/resources/" class="nav-link">资源</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前端帮帮忙</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myarticle/qdbbm/1.html" class="sidebar-link">第1期 聊聊css居中那点事</a></li><li><a href="/myarticle/qdbbm/2.html" class="sidebar-link">第2期 Shadow DOM来了解一下</a></li><li><a href="/myarticle/qdbbm/3.html" class="active sidebar-link">第3期 使用CSS的border属性绘制各种几何形状</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#border绘制几何形状的原理" class="sidebar-link">border绘制几何形状的原理</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#border能绘制什么几何形状？" class="sidebar-link">border能绘制什么几何形状？</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#三角形" class="sidebar-link">三角形</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#平行四边形" class="sidebar-link">平行四边形</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#五边形" class="sidebar-link">五边形</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#六边形" class="sidebar-link">六边形</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#实战应用" class="sidebar-link">实战应用</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#总结" class="sidebar-link">总结</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#最后" class="sidebar-link">最后</a></li><li class="sidebar-sub-header"><a href="/myarticle/qdbbm/3.html#关注" class="sidebar-link">关注</a></li></ul></li><li><a href="/myarticle/qdbbm/4.html" class="sidebar-link">第4期 使用纯CSS制作一个开关按钮</a></li><li><a href="/myarticle/qdbbm/5.html" class="sidebar-link">第5期 关于CSS权重，你了解多少？</a></li><li><a href="/myarticle/qdbbm/6.html" class="sidebar-link">第6期 移动端使用video标签需要注意的一些问题</a></li><li><a href="/myarticle/qdbbm/7.html" class="sidebar-link">第7期 关于节流(throttle)和防抖(debounce)的理解</a></li><li><a href="/myarticle/qdbbm/8.html" class="sidebar-link">第8期 关于BFC，你需要了解的</a></li><li><a href="/myarticle/qdbbm/9.html" class="sidebar-link">第9期 你可能不知道的CSS隐藏页面元素的方法</a></li><li><a href="/myarticle/qdbbm/10.html" class="sidebar-link">第10期 浅析类数组对象</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端安全</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="第3期-使用css的border属性绘制各种几何形状"><a href="#第3期-使用css的border属性绘制各种几何形状" class="header-anchor">#</a> 第3期 使用CSS的border属性绘制各种几何形状</h1> <p><code>border</code>边框属性可以说是我们在网页布局中最常用不过的一个属性之一。<code>border</code>它不只是边框，它还有很多非常有用的“黑魔法”哈，让我们一起来学习一下。</p> <h2 id="border绘制几何形状的原理"><a href="#border绘制几何形状的原理" class="header-anchor">#</a> border绘制几何形状的原理</h2> <p>我们先来看一个简单的小例子：</p> <p>在页面上写一个<code>div</code></p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;border-test&quot;&gt;&lt;div&gt;
+</code></pre></div><p>给这个<code>div</code>加上以下样式</p> <div class="language- extra-class"><pre class="language-text"><code>.border-test {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  border-top: 50px solid red;
+  border-right: 50px solid yellow;
+  border-bottom: 50px solid blue;
+  border-left: 50px solid green;
+}
+</code></pre></div><p>在浏览器预览可以看到下面的效果</p> <div><img src="/images/qdbbm/3/1.jpg" alt></div> <p>接下来，我们把这个<code>div</code>的宽度跟高度都设为<code>0</code>，看看是什么效果</p> <div><img src="/images/qdbbm/3/2.jpg" alt></div> <p>是不是剩下4个不同颜色不同方向的三角形了，继续往下看，一起来见证下<code>border</code>的黑魔法。</p> <h2 id="border能绘制什么几何形状？"><a href="#border能绘制什么几何形状？" class="header-anchor">#</a> border能绘制什么几何形状？</h2> <ul><li>三角形</li> <li>梯形</li> <li>平行四边形</li> <li>五边形</li> <li>六边形</li> <li>八边形</li> <li>五角星</li> <li>六角星</li> <li>...</li></ul> <h2 id="三角形"><a href="#三角形" class="header-anchor">#</a> 三角形</h2> <h3 id="向上的三角形"><a href="#向上的三角形" class="header-anchor">#</a> 向上的三角形</h3> <div><img src="/images/qdbbm/3/3.jpg" alt></div> <p>要得到向上的三角形，是不是只要设置<code>上边框</code>的宽度为<code>0</code>，设置<code>上边框</code>、<code>左边框</code>、<code>右边框</code>的边框颜色设为<code>transparent</code>透明，保留<code>下边框</code>的边框颜色就可以了，看代码：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;triangle triangle-up&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 公共
+.triangle {
+    width: 0;
+    height: 0;
+}
+
+// 向上的三角形
+.triangle-up {
+    border-top: 0 solid transparent; // 这句这可以省略
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid blue;
+    border-left: 50px solid transparent;
+}
+</code></pre></div><p>还可以简写成，遵循<code>上右下左</code>顺序来设置</p> <div class="language- extra-class"><pre class="language-text"><code>.triangle-up {
+    border-width: 0 50px 50px;  // 边框大小
+    border-style: solid;  // 边框样式
+    border-color: transparent transparent blue;  // 边框颜色
+}
+</code></pre></div><p>下面代码都会用简写的形式。</p> <h3 id="向右的三角形"><a href="#向右的三角形" class="header-anchor">#</a> 向右的三角形</h3> <div><img src="/images/qdbbm/3/4.jpg" alt></div> <p>同理，设置<code>右边框</code>的宽度为<code>0</code>，设置<code>上边框</code>、<code>右边框</code>、<code>下边框</code>的边框颜色为透明，保留<code>左边框</code>的边框颜色就可以了</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;triangle triangle-right&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>.triangle-right {
+    border-width: 50px 0 50px 50px;
+    border-style: solid;
+    border-color: transparent transparent transparent green;
+}
+</code></pre></div><h3 id="向下的三角形"><a href="#向下的三角形" class="header-anchor">#</a> 向下的三角形</h3> <div><img src="/images/qdbbm/3/5.jpg" alt></div> <p>同理，设置<code>下边框</code>的宽度为<code>0</code>，设置<code>左边框</code>、<code>右边框</code>、<code>下边框</code>的边框颜色为透明，保留<code>上边框</code>的边框颜色就可以了</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;triangle triangle-bottom&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>.triangle-bottom {
+    border-width: 50px 50px 0;
+    border-style: solid;
+    border-color: red transparent transparent;
+}
+</code></pre></div><h3 id="向左的三角形"><a href="#向左的三角形" class="header-anchor">#</a> 向左的三角形</h3> <div><img src="/images/qdbbm/3/6.jpg" alt></div> <p>同理，设置<code>左边框</code>的宽度为<code>0</code>，设置<code>上边框</code>、<code>下边框</code>、<code>左边框</code>的边框颜色为透明，保留<code>右边框</code>的边框颜色就可以了</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;triangle triangle-left&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>.triangle-left {
+    border-width: 50px 50px 50px 0;
+    border-style: solid;
+    border-color: transparent yellow transparent transparent;
+}
+</code></pre></div><p>接下来再来看下如何实现下面的三角形呢？</p> <div><img src="/images/qdbbm/3/7.jpg" alt></div> <p>其实不难发现，向左上的三角形刚好是向下的三角形的右半部分，所以要得到这个图形，是不是只要把向下的三角形左半部分的边框设为0就可以了，看代码：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div class=&quot;triangle triangle-top-left&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>.triangle-top-left {
+    border-width: 50px 50px 0 0;
+    border-style: solid;
+    border-color: red transparent transparent;
+}
+</code></pre></div><p>同理，可得到其他三个不同方向三角形，代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>.triangle-top-right {
+    border-width: 50px 0 0 50px;
+    border-style: solid;
+    border-color: red transparent transparent;
+}
+
+.triangle-bottom-left {
+    border-width: 0 50px 50px 0;
+    border-style: solid;
+    border-color: transparent transparent blue;
+}
+
+.triangle-bottom-right {
+    border-width: 0 0 50px 50px;
+    border-style: solid;
+    border-color: transparent transparent blue;
+}
+</code></pre></div><p>##梯形</p> <p>借助上面的实现三角形的方法，我们可以很容易的实现梯形，比如下面这个：</p> <p>向上的梯形：</p> <div><img src="/images/qdbbm/3/8.jpg" alt></div> <p>其实只要把上面<code>向上的三角形</code>的代码加上宽度就能实现了</p> <div class="language- extra-class"><pre class="language-text"><code>.trapezoid {
+  width: 60px;
+  border-bottom: 60px solid red;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+}
+</code></pre></div><p>同理，可以得到<code>向下的梯形</code></p> <div><img src="/images/qdbbm/3/9.jpg" alt></div> <div class="language- extra-class"><pre class="language-text"><code>.trapezoid-bottom {
+    width: 50px;
+    border-top: 50px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+</code></pre></div><p>如果要得到向左和向右的梯形，需要把<code>width</code>设为<code>0</code>，然后设置相应的高度值。</p> <div><img src="/images/qdbbm/3/10.jpg" alt></div> <div class="language- extra-class"><pre class="language-text"><code>.trapezoid-left {
+    width: 0;
+    height: 50px;
+    border-width: 50px 50px 50px 0;
+    border-style: solid;
+    border-color: transparent red transparent transparent;
+}
+
+.trapezoid-right {
+    width: 0;
+    height: 50px;
+    border-width: 50px 0 50px 50px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+}
+</code></pre></div><h2 id="平行四边形"><a href="#平行四边形" class="header-anchor">#</a> 平行四边形</h2> <p>只要一个<code>向上的三角形</code>跟<code>向下的三角形</code>结合起来就能实现，需要配合一个伪元素。</p> <div><img src="/images/qdbbm/3/11.jpg" alt></div> <div class="language- extra-class"><pre class="language-text"><code>.parallelogram {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-width: 0 50px 50px;
+    border-style: solid;
+    border-color: transparent transparent red;
+}
+
+.parallelogram:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 50px 50px 0;
+    border-style: solid;
+    border-color: red transparent transparent;
+    content: &quot;&quot;;
+}
+</code></pre></div><h2 id="五边形"><a href="#五边形" class="header-anchor">#</a> 五边形</h2> <p>梯形加上一个三角形，很容易就能组合成一个五边形，也需要配合一个伪元素来实现。</p> <div><img src="/images/qdbbm/3/12.jpg" alt></div> <div class="language- extra-class"><pre class="language-text"><code>.pentagon {
+    position: relative;
+    width: 50px;
+    border-bottom: 50px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.pentagon:after {
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border-width: 75px 75px 0;
+    border-style: solid;
+    border-color: red transparent transparent;
+    content: &quot;&quot;;
+}
+</code></pre></div><h2 id="六边形"><a href="#六边形" class="header-anchor">#</a> 六边形</h2> <p>如果两个相反方向且底边同样大小的梯形，叠加在一起，是不是就能得到一个六边形呢？同样需要配合一个伪元素来实现。</p> <div><img src="/images/qdbbm/3/13.jpg" alt></div> <div class="language- extra-class"><pre class="language-text"><code>.hexagon {
+    position: relative;
+    width: 50px;
+    border-bottom: 50px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon:after {
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 50px;
+    border-top: 50px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    content: &quot;&quot;;
+}
+</code></pre></div><h2 id="实战应用"><a href="#实战应用" class="header-anchor">#</a> 实战应用</h2> <h3 id="聊天气泡"><a href="#聊天气泡" class="header-anchor">#</a> 聊天气泡</h3> <div><img src="/images/qdbbm/3/14.jpg" alt></div> <p>是不是用到了<code>向下的三角形</code>结合一个圆角矩形来实现。</p> <h3 id="下拉菜单"><a href="#下拉菜单" class="header-anchor">#</a> 下拉菜单</h3> <p>我们打开淘宝天猫，来看下它顶部的下拉菜单，是不是也用到<code>向上的三角形</code>和<code>向下的三角</code>形。</p> <div><img src="/images/qdbbm/3/15.jpg" alt></div> <p>我们来看下它的实现代码：</p> <div><img src="/images/qdbbm/3/16.jpg" alt></div> <p>再来看一个，我们打开京东秒杀</p> <div><img src="/images/qdbbm/3/17.jpg" alt></div> <p>是不是就用到了我们上面分析的<code>平行四边形</code>来实现的，我们同样来看下它的实现代码：</p> <div><img src="/images/qdbbm/3/18.jpg" alt></div> <p>就是通过一个矩形，然后配合两个伪元素的三角形结合起来实现的。</p> <p>具体使用场景还有很多，大家可以根据自己平时项目开发中的实际需求来发挥想象。</p> <blockquote><p>能用CSS样式搞定的效果就不要使用图片哈，不仅有利于后期的维护，也能减少网页的请求，提高页面的加载速度。</p></blockquote> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>其实通过各种组合，还可以实现很多不同的形状，这里就不一一列举了。比如还可以实现<code>八边形</code>、<code>五角星</code>、<code>六角星</code>、<code>八角星</code>、<code>十二角星</code>等等，<code>border</code>就是这么强大。</p> <h2 id="最后"><a href="#最后" class="header-anchor">#</a> 最后</h2> <p>感谢您的阅读，希望对你有所帮助。由于本人水平有限，如果文中有描述不当的地方，烦请指正，非常感谢。</p> <h2 id="关注"><a href="#关注" class="header-anchor">#</a> 关注</h2> <p>欢迎大家关注我的公众号<code>前端帮帮忙</code>，一起交流学习，共同进步！</p> <div><img src="/images/qdbbm/qdbbm.jpg" alt></div> <h3 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h3> <p><a href="https://www.cnblogs.com/lhb25/p/css-and-css3-triangle.html" target="_blank">https://www.cnblogs.com/lhb25/p/css-and-css3-triangle.html</a></p> <p><a href="http://www.mamicode.com/info-detail-1851595.html" target="_blank">http://www.mamicode.com/info-detail-1851595.html</a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">1/21/2020, 4:46:34 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myarticle/qdbbm/2.html" class="prev">第2期 Shadow DOM来了解一下</a></span> <span class="next"><a href="/myarticle/qdbbm/4.html">第4期 使用纯CSS制作一个开关按钮</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.860d6138.js" defer></script><script src="/assets/js/2.13cab879.js" defer></script><script src="/assets/js/35.3288073b.js" defer></script>
+  </body>
+</html>
